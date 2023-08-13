@@ -1,0 +1,2 @@
+# hjd2048AutoAign
+通过github action每天免费hjd2048自动签到
