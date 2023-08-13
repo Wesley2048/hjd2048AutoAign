@@ -1,0 +1,32 @@
+name: Auto Sign
+
+on:
+  push:
+  gollum:
+  schedule:
+    - cron: '0 0,4,8,12,16,20  * * *'
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: use Node.js 18.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Run Python Service
+        run: |
+          pip3.9 install flask opencv-python ddddocr
+          pip3.9 install --force-reinstall -v "Pillow==9.5.0"
+          nohup python3.9 app.py &
+      - name: npm install and do sign
+        run: |
+          npm install
+          node main.js

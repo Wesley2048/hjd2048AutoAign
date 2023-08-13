@@ -1,0 +1,28 @@
+{
+    "name": "hjd2048",
+    "version": "1.0.0",
+    "description": "hjd2048自动签到脚本和docker",
+    "main": "main.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Wesley2048/hjd2048AutoAign"
+    },
+    "keywords": [
+      "hjd2048",
+      "自动签到",
+      "autosign"
+    ],
+    "author": "wesley2048",
+    "license": "GPL-3.0",
+    "bugs": {
+      "url": "https://github.com/Wesley2048/hjd2048AutoAign/issues"
+    },
+    "homepage": "https://github.com/Wesley2048/hjd2048AutoAign#readme",
+    "dependencies": {
+      "axios": "^1.4.0",
+      "puppeteer": "^21.0.2"
+    }
+  }
